@@ -79,6 +79,7 @@ permissions on the DynamoDB table (`arn:aws:dynamodb:::table/mytable`):
 * `dynamodb:GetItem`
 * `dynamodb:PutItem`
 * `dynamodb:DeleteItem`
+* `dynamodb:DescribeTable`
 
 This is seen in the following AWS IAM Statement:
 
@@ -91,7 +92,8 @@ This is seen in the following AWS IAM Statement:
       "Action": [
         "dynamodb:GetItem",
         "dynamodb:PutItem",
-        "dynamodb:DeleteItem"
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
       ],
       "Resource": "arn:aws:dynamodb:*:*:table/mytable"
     }
